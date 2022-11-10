@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "flexing..."
+flex exp.l
+echo "bison running..."
+bison exp.y
+echo "gcc compiling..."
+gcc lex.yy.c exp.tab.c
+echo "executing..."
+./a.out
+
